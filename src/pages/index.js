@@ -24,6 +24,7 @@ export default function Home() {
     const [walletAddress, setWalletAddress] = useState(null);
     const [inputValue, setInputValue] = useState("");
     const [gifList, setGifList] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const checkIfWalletIsConnected = async () => {
         try {
@@ -135,12 +136,15 @@ export default function Home() {
             });
             console.log("Tipped a GIF", inputValue);
             await getGifList();
+            setIsLoading(false);
         } catch (error) {
+            setIsLoading(false);
             console.log("Error sending GIF:", error);
         }
     };
 
     const executeTransaction = async (index) => {
+        setIsLoading(true);
         try {
             const provider = window.solana;
             const pubKey = await provider.publicKey;
@@ -183,7 +187,9 @@ export default function Home() {
             console.log("Signature: ", signature);
 
             await addTip(index);
+            
         } catch (error) {
+            setIsLoading(false);
             console.log("Error sending tip:", error);
         }
     };
@@ -384,6 +390,12 @@ export default function Home() {
                             </a>
                         </div>
             </div>
+
+            { isLoading && <div className="absolute  w-screen h-screen bg-white inset-0 z-30 backdrop-blur-lg bg-opacity-10 flex flex-col items-center justify-center" onClick={() => {}}>
+                <div className="px-10 py-4 bg-white rounded-lg font-bold">
+                    Loading...
+                </div>
+            </div>}
 
             <div className="h-screen w-screen overflow-hidden hidden md:block">
                 <Head>
