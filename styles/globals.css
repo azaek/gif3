@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  src: url("/Satoshi-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  src: url("/Satoshi-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  src: url("/Satoshi-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  src: url("/Satoshi-Black.woff2");
+}
+
+body {
+  @apply font-satoshi;
+}
