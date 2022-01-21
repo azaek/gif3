@@ -376,7 +376,7 @@ export default function Home() {
                             </a>
                             <a
                                 className="font-bold decoration-[#69EACB] underline underline-offset-1"
-                                href="https://twitter.com/datbugdied"
+                                href="https://github.com/azaek/gif3"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -406,7 +406,7 @@ export default function Home() {
                             </a>
                             <a
                                 className="font-bold decoration-[#69EACB] underline underline-offset-1"
-                                href="https://twitter.com/datbugdied"
+                                href="https://github.com/azaek/gif3"
                                 target="_blank"
                                 rel="noreferrer"
                             >
