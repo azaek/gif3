@@ -281,7 +281,7 @@ export default function Home() {
                         <div className="w-full h-20 flex items-center justify-between mb-4">
                             <button
                                 onClick={() =>
-                                    executeTransaction(gif.index.toNumber())
+                                    executeTransaction(gif?.index.toNumber())
                                 }
                                 className="text-[#69EACB] px-4 py-2 font-bold w-[40%] bg-[#69EACB] bg-opacity-20"
                             >
@@ -296,7 +296,7 @@ export default function Home() {
                                     SOL
                                 </p>
                                 <p className="text-white/80 font-medium">
-                                    {shortenAddress(gif.userAddress.toString())}
+                                    {shortenAddress(gif?.userAddress.toString())}
                                 </p>
                             </div>
                         </div>
@@ -313,7 +313,7 @@ export default function Home() {
                     <div className="w-full flex items-center justify-between px-3 pb-3">
                         <button
                             onClick={() =>
-                                executeTransaction(gif.index.toNumber())
+                                executeTransaction(gif?.index.toNumber())
                             }
                             className="text-[#000000] px-4 py-2 font-bold text-sm w-[40%] bg-[#000000] bg-opacity-20 self-end"
                         >
@@ -323,11 +323,11 @@ export default function Home() {
                             <p className="text-black/60 font-bold text-sm">
                                 {gif?.tipCount.toNumber() === 0
                                     ? "0"
-                                    : gif.tipCount.toNumber() / 1000000000}{" "}
+                                    : gif?.tipCount.toNumber() / 1000000000}{" "}
                                 SOL
                             </p>
                             <p className="text-black/80 font-bold text-xs">
-                                {shortenAddress(gif.userAddress.toString())}
+                                {shortenAddress(gif?.userAddress.toString())}
                             </p>
                         </div>
                     </div>
@@ -335,7 +335,7 @@ export default function Home() {
                 <div className="w-[250px] h-[250px] bg-black z-[1] p-2 pointer-events-none absolute left-[-10px] top-[-10px]">
                     <img
                         className="w-full h-full object-scale-down"
-                        src={gif.gifLink}
+                        src={gif?.gifLink}
                         alt=""
                     />
                 </div>
