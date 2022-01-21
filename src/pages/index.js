@@ -267,14 +267,14 @@ export default function Home() {
                 <div className="w-full h-full bg-black flex flex-col px-4 py-4 z-[1] justify-between">
                     <img
                         className="w-36 ml-4 mt-2"
-                        src={gif?.gifLink}
+                        src="/spotlight.svg"
                         alt=""
                     />
                     <div className="w-full flex flex-col justify-evenly">
                         <div className="w-full bg-red-50 mt-4 max-h-[60%]">
                             <img
                                 className="w-full h-full object-cover"
-                                src="https://media3.giphy.com/media/26BGuSXQAAwcOj3sA/200w.webp"
+                                src={gif?.gifLink}
                                 alt=""
                             />
                         </div>
@@ -438,7 +438,7 @@ export default function Home() {
 
                 <main className="w-screen h-full overflow-y-scroll sm:overflow-hidden flex flex-col sm:grid sm:grid-cols-6 grid-flow-row gap-10 mx-auto px-20 pt-10">
                     <section className="h-full w-full flex flex-col items-center col-span-2">
-                        <SpotLightCard gif={gifList[0]} />
+                        { gifList.length > 0 && <SpotLightCard gif={gifList[0]} />}
                     </section>
 
                     <section className="h-[80vh] flex flex-col px-4 overflow-x-hidden overflow-y-scroll col-span-4">
