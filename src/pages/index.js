@@ -289,9 +289,9 @@ export default function Home() {
                             </button>
                             <div className="flex flex-col items-end w-[50%]">
                                 <p className="text-[#69EACB]/60 font-medium">
-                                    {gif.tipCount.toNumber() === 0
+                                    {gif?.tipCount.toNumber() === 0
                                         ? "0"
-                                        : gif.tipCount.toNumber() /
+                                        : gif?.tipCount.toNumber() /
                                           1000000000}{" "}
                                     SOL
                                 </p>
@@ -321,7 +321,7 @@ export default function Home() {
                         </button>
                         <div className="flex flex-col items-end w-[50%]">
                             <p className="text-black/60 font-bold text-sm">
-                                {gif.tipCount.toNumber() === 0
+                                {gif?.tipCount.toNumber() === 0
                                     ? "0"
                                     : gif.tipCount.toNumber() / 1000000000}{" "}
                                 SOL
@@ -462,7 +462,7 @@ export default function Home() {
                         </div>
 
                         <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-10 grid-flow-row py-10 items-end mx-auto">
-                            {gifList.slice(1).map((gif, index) => (
+                            {gifList && gifList.slice(1).map((gif, index) => (
                                 <Card key={index} gif={gif} />
                             ))}
                         </div>
