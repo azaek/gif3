@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="w-full h-full bg-black flex flex-col px-4 py-4 z-[1] justify-between">
                     <img
                         className="w-36 ml-4 mt-2"
-                        src="/spotlight.svg"
+                        src={gif?.gifLink}
                         alt=""
                     />
                     <div className="w-full flex flex-col justify-evenly">
